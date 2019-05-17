@@ -13,8 +13,9 @@ defmodule RNATranscription do
       ?G => ?C,
       ?C => ?G,
       ?T => ?A,
-      ?A => ?U,
+      ?A => ?U
     }
+
     Enum.map(dna, fn c -> mapping[c] end)
   end
 end

@@ -23,9 +23,10 @@ defmodule SpaceAge do
       jupiter: 11.862615,
       saturn: 29.447498,
       uranus: 84.016846,
-      neptune: 164.79132,
+      neptune: 164.79132
     }
-    earth_years = seconds / 31557600.0000
+
+    earth_years = seconds / 31_557_600.0000
     earth_years / mappings[planet]
   end
 end

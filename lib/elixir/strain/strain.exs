@@ -10,7 +10,7 @@ defmodule Strain do
     filter(list, fun, [])
   end
 
-  defp filter([head|tail], fun, acc) do
+  defp filter([head | tail], fun, acc) do
     new_acc = if fun.(head), do: acc ++ [head], else: acc
     filter(tail, fun, new_acc)
   end
@@ -33,5 +33,4 @@ defmodule Strain do
   defp comp(fun) do
     fn x -> !fun.(x) end
   end
-
 end

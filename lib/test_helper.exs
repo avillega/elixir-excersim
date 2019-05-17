@@ -1,2 +1,2 @@
-ExUnit.configure include: :pending
-ExUnit.start
+ExUnit.configure(include: :pending)
+ExUnit.start()

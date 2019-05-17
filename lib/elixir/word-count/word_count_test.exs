@@ -24,7 +24,7 @@ defmodule WordsTest do
     assert Words.count("one fish two fish red fish blue fish") == expected
   end
 
-    @tag :pending
+  @tag :pending
   test "words withing parens" do
     expected = %{"one" => 1, "fish" => 4, "two" => 1, "red" => 1, "blue" => 1}
     assert Words.count("one (fish) two {fish} red [fish] blue fish") == expected

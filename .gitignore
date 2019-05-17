@@ -24,3 +24,5 @@ erl_crash.dump
 .vscode/*
 
 **/metadata.json
+
+.elixir_ls
