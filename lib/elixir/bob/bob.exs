@@ -5,7 +5,7 @@ defmodule Bob do
       question(input) and shouting(input) -> "Calm down, I know what I'm doing!"
       shouting(input) -> "Whoa, chill out!"
       question(input) -> "Sure."
-      :default -> "Whatever."
+      true -> "Whatever."
     end
   end
 
@@ -14,10 +14,11 @@ defmodule Bob do
   end
 
   defp shouting(input) do
-    Regex.match?(~r/^.*[[:upper:]]+.*$/u, input) and input === String.upcase(input)
+    String.upcase(input) != String.downcase(input) and
+      String.upcase(input) == input
   end
 
   defp silence(input) do
-    Regex.match?(~r/^\s*$/u, input)
+    String.trim(input) == ""
   end
 end
